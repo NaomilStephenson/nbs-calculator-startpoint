@@ -2,62 +2,31 @@
 <head>
 
   <title>Calculator Exercise</title>
-
-  <style>
-    .calc { 
-      width: 100%; 
-      max-width: 330px; 
-      padding: 15px; 
-      margin: auto; 
-    }
-  </style>
 </head>
 <body>
-  <main class="text-center calc">
-
     <!-- this is the calculator form -->
-    <form>
-      <h1 class="h3 mb-3 fw-normal">Calculator</h1>
+      <h1>Calculator</h1>
       
-      <!-- this is the first input -->
-      <div class="form-floating">
-        <input id="input_1" class="form-control" type="number" placeholder="1"/>
-        <label for="input_1">Input 1</label>
-      </div> 
+      <div>
+        <!--Inputs-->
+        <label for="value1">Value 1</label>
+        <input id="value1" type="number"/>
+        <label for="value2">Value 2</label>
+        <input id="value2" type="number"/>
+      </div>
       
       <!-- the buttons -->
-      <div class="row mt-2">
-        <div class="col">
-          <button id="button_add" class="w-100 btn btn-lg btn-success" type="button">+</button>
-        </div>
-        <div class="col">
-          <button id="button_subtract" class="w-100 btn btn-lg btn-danger" type="button">-</button>
-        </div>
-        <div class="col">
-          <button id="button_multiply" class="w-100 btn btn-lg btn-info" type="button">x</button>
-        </div>
-        <div class="col">
-          <button id="button_divide" class="w-100 btn btn-lg btn-warning" type="button">/</button>
-        </div>
+      <div>
+          <button id="addButton" type="button">+</button>
+          <button id="subtractButton" type="button">-</button>
+          <button id="multiplyButton" type="button">x</button>
+          <button id="divideButton" type="button">/</button>
       </div>
-
-      <!-- this is the second input -->
-      <div class="form-floating mt-2">
-        <input id="input_2" class="form-control" type="number" placeholder="2"/>
-        <label for="input_2">Input 2</label>
-      </div>
-      
-    </form>
 
     <!-- calculations should output to this list -->
-    <h1 class="h4 mb-3 fw-normal mt-3">Output List</h1>
-    <ul id="list_output" class="list-group">
-      <!-- this is a placeholder -->
-      <li class="list-group-item">42</li>
+    <h3>Output List</h3>
+    <ul id="answerList">
     </ul>
-
-  </main>
-
-  <script type="text/javascript" src="./calculator.js"></script>
+  <script type="module" src="./calculator.js"></script>
 </body>
 </html>
