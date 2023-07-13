@@ -1,32 +1,80 @@
 <!DOCTYPE html>
 <head>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <title>Calculator Exercise</title>
 </head>
 <body>
-    <!-- this is the calculator form -->
-      <h1>Calculator</h1>
-      
+  <div class="container text-center">
+          <!-- this is the calculator form -->
+          <br/>
+          <br/>
+          <h1>Calculator</h1>
+          <br/>
+          <br/>
+    <div class="row align-items-start">
+      <div class="col">
+      </div>
+      <div class="col">        
       <div>
         <!--Inputs-->
-        <label for="value1">Value 1</label>
-        <input id="value1" type="number"/>
-        <label for="value2">Value 2</label>
-        <input id="value2" type="number"/>
+        <div class="card">
+          <div class="card-body">
+            <h3>Input</h3>
+            <br/>
+            <form id="calcForm">
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="value1" placeholder="First Value">
+              </div>
+              <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="value2" placeholder="Second Value">
+              </div>
+            </form>
+            <br/>
+            <hr />
+            <!-- the buttons -->
+            <div class="container text-center">
+              <div class="row">
+                <div class="col">
+                  <button class="w-100 btn btn-primary btn-lg" id="addButton" type="button">+</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 btn btn-primary btn-lg" id="subtractButton" type="button">-</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 btn btn-primary btn-lg" id="multiplyButton" type="button">x</button>
+                </div>
+                <div class="col">
+                  <button class="w-100 btn btn-primary btn-lg" id="divideButton" type="button">/</button>
+                </div>
+              </div>
+              <br/>
+              <div class="row">
+                <div class="col">
+                  <button type="button" class="w-100 btn btn-danger btn-lg" id="resetButton">Reset</button>
+                </div>
+                <div class="col">
+                  <button type="button" class="w-100 btn btn-success btn-lg" id="enterButton">Enter</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <!-- the buttons -->
-      <div>
-          <button id="addButton" type="button">+</button>
-          <button id="subtractButton" type="button">-</button>
-          <button id="multiplyButton" type="button">x</button>
-          <button id="divideButton" type="button">/</button>
       </div>
-
-    <!-- calculations should output to this list -->
-    <h3>Output List</h3>
-    <ul id="answerList">
-    </ul>
+      <div class="col">
+        <!-- calculations should output to this list -->
+        <h3>Output</h3>
+        <ul id="answerList" class="list-group list-group-flush">
+        </ul>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button type="button" class="w-50 btn btn-outline-secondary btn-sm me-md-2" id="clearButton">Clear Output</button>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
   <script type="module" src="./calculator.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
